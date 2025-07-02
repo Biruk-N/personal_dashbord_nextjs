@@ -1,0 +1,202 @@
+@import "tailwindcss";
+/* @import "@tailwindcss/forms"; */
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #0a0e1a;
+  --foreground: #e6e8ec;
+  --card: #181c31;
+  --card-foreground: #e6e8ec;
+  --popover: #181c31;
+  --popover-foreground: #e6e8ec;
+  --primary: #8ab4f8;
+  --primary-foreground: #181c31;
+  --secondary: #23263a;
+  --secondary-foreground: #e6e8ec;
+  --muted: #23263a;
+  --muted-foreground: #e6e8ec;
+  --accent: #8ab4f8;
+  --accent-foreground: #181c31;
+  --destructive: #704 0.191 22.216;
+  --border: #23263a;
+  --input: #23263a;
+  --ring: #8ab4f8;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #181c31;
+  --sidebar-foreground: #e6e8ec;
+  --sidebar-primary: #205 0 0;
+  --sidebar-primary-foreground: #985 0 0;
+  --sidebar-accent: #269 0 0;
+  --sidebar-accent-foreground: #985 0 0;
+  --sidebar-border: #23263a;
+  --sidebar-ring: #8ab4f8;
+  --font-sans: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5384;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5333;
+  --text-base--letter-spacing: -0.0125em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.0125em;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-xl--letter-spacing: -0.0125em;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.415;
+  --text-2xl--letter-spacing: -0.0268em;
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: 1.3571;
+  --text-3xl--letter-spacing: -0.0268em;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.1;
+  --text-4xl--letter-spacing: -0.0268em;
+  --text-5xl: 3.5rem;
+  --text-5xl--line-height: 1;
+  --text-5xl--letter-spacing: -0.0268em;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1;
+  --text-6xl--letter-spacing: -0.0268em;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --text-7xl--letter-spacing: -0.0268em;
+  --max-w-xs: 20rem;
+  --max-w-sm: 24rem;
+  --max-w-md: 28rem;
+  --max-w-lg: 32rem;
+  --max-w-xl: 36rem;
+  --max-w-2xl: 42rem;
+  --max-w-3xl: 48rem;
+  --max-w-4xl: 56rem;
+  --max-w-5xl: 64rem;
+  --max-w-6xl: 72rem;
+  --max-w-7xl: 80rem;
+  --max-w-dashboard: 90rem;
+}
+
+.dark {
+  --background: #0a0e1a;
+  --foreground: #e6e8ec;
+  --card: #181c31;
+  --card-foreground: #e6e8ec;
+  --popover: #181c31;
+  --popover-foreground: #e6e8ec;
+  --primary: #8ab4f8;
+  --primary-foreground: #181c31;
+  --secondary: #23263a;
+  --secondary-foreground: #e6e8ec;
+  --muted: #23263a;
+  --muted-foreground: #e6e8ec;
+  --accent: #8ab4f8;
+  --accent-foreground: #181c31;
+  --destructive: #704 0.191 22.216;
+  --border: #23263a;
+  --input: #23263a;
+  --ring: #8ab4f8;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #181c31;
+  --sidebar-foreground: #e6e8ec;
+  --sidebar-primary: #488 0.243 264.376;
+  --sidebar-primary-foreground: #985 0 0;
+  --sidebar-accent: #269 0 0;
+  --sidebar-accent-foreground: #985 0 0;
+  --sidebar-border: #23263a;
+  --sidebar-ring: #8ab4f8;
+  --font-sans: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: var(--primary-foreground);
+  }
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--border);
+  }
+}
+
+@keyframes shine {
+  0% { top: 0; transform: scaleY(5); opacity: 0; }
+  10% { opacity: 0.8; }
+  20% { top: 100%; transform: scaleY(10); opacity: 0; }
+  100% { top: 100%; transform: scaleY(1); opacity: 0; }
+}
+@keyframes gradient {
+  to { background-position: 200% center; }
+}
